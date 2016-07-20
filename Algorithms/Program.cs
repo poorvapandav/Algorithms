@@ -10,9 +10,11 @@ namespace Algorithms
     {
         static void Main(string[] args)
         {
-          int[] input = { 4, 5, 7, 6 };
-          input=BubbleSort.Sort(input);
-
+            //int[] input = { 4, 5, 7, 6 };
+            Console.WriteLine("Enter the numbers to be sorted separated by comma:");
+            string numbers = Console.ReadLine();
+            int[] input = GetIntegerfromString(numbers);
+            input = BubbleSort.Sort(input);            
             PrintArray(input);
             Console.ReadKey();
         }
@@ -21,8 +23,16 @@ namespace Algorithms
         {
             foreach (int i in input)
             {
-                Console.Write("{0}", i);
+                Console.WriteLine("{0}", i);
             }
+        }
+
+        public static int[] GetIntegerfromString(string input)
+        {
+            int[] numbers = null;
+            string[] numbersInString = input.Split(',');
+            numbers = Array.ConvertAll(numbersInString, int.Parse);
+            return numbers;
         }
     }
 }

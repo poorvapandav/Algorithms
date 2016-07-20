@@ -28,6 +28,7 @@ namespace Algorithms
                 }
 
             } while (isSwitched); //iterate till it is not switched in for loop
+            Console.WriteLine("numbers sorted using bubble sort: ");
             return input;
         }
     }
