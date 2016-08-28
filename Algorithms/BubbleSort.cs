@@ -20,9 +20,7 @@ namespace Algorithms
                 {
                     if(input[i]>input[i+1])
                     {
-                        int temp = input[i];
-                        input[i] = input[i + 1];
-                        input[i + 1] = temp;
+                        Utility.Swap(ref input[i],ref input[i + 1]);
                         isSwitched = true;
                     }
                 }

@@ -13,26 +13,13 @@ namespace Algorithms
             //int[] input = { 4, 5, 7, 6 };
             Console.WriteLine("Enter the numbers to be sorted separated by comma:");
             string numbers = Console.ReadLine();
-            int[] input = GetIntegerfromString(numbers);
-            input = BubbleSort.Sort(input);            
-            PrintArray(input);
+            int[] input = Utility.GetIntegerfromString(numbers);
+            input = BubbleSort.Sort(input);
+            Utility.PrintArray(input);
             Console.ReadKey();
         }
 
-        public static void PrintArray(int[] input)
-        {
-            foreach (int i in input)
-            {
-                Console.WriteLine("{0}", i);
-            }
-        }
-
-        public static int[] GetIntegerfromString(string input)
-        {
-            int[] numbers = null;
-            string[] numbersInString = input.Split(',');
-            numbers = Array.ConvertAll(numbersInString, int.Parse);
-            return numbers;
-        }
+        
+       
     }
 }
